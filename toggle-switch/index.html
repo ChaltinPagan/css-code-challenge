@@ -1,6 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <style>
+    body {
+      background-color: #7a86cb;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+    label {
+      position: relative ;
+      display: inline-block;
+      width: 40px;
+      height: 20px;
+      background-color: rgba(0, 0, 0, 0.5);
+      border: 1px solid rgba(0, 0, 0, 0.35);
+      border-radius: 20px;
+      padding: 1px;
+    }
+    label:after {
+      content: '';
+      position: absolute;
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      border: 1px solid rgba(0, 0, 0, 0.35);
+      background-color: rgba(0, 0, 0, 0.5);
+      top: 1px; 
+      left: 1x;
+      transition: all 0.3s;
+    }
+    input {
+      display: none;
+    }
+    input:checked + label {
+      border-color: #4c537e;
+      background-color: rgba(230, 231, 242, 0.15);
+    }
+    input:checked + label:after {
+      left: 21px;
+      border-color: #E6E7F2;
+      background-color: #E6E7F2;
+      transition: all 0.3s;
+    }
+  </style>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>V+V Code Challenge - Toggle Switch</title>
