@@ -1,0 +1,60 @@
+body {
+    font-family: 'Barlow', sans-serif;
+    background-color: #7a86cb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+div {
+    position: relative;
+}
+input {
+    width: 250px;
+    height: 30px;
+    padding: 8px;
+    border: 2px solid #24283D;
+    border-radius: 5px;
+    background-color: #49517B;
+}
+label {
+    position: absolute;
+    left: 8px;
+    top: 0;
+    padding: 2px;
+    color: #E6E7F2;
+    transition: all 100ms;
+    transform: translateY(12px);
+    transform-origin: left;
+    pointer-events: none;
+}
+input:valid {
+    background-color: #7a86cb;
+    color: #E6E7F2;
+}
+input:valid ~ label  {
+    background-color: #7a86cb;
+    color: #383E5E;
+    border-color: #383E5E;
+}
+input:focus {
+    background-color: #7a86cb;
+    color: #0027FF;
+    border-color: #0027FF;
+    outline: none;
+}
+input:focus:valid,
+input:focus:valid ~ label {
+    color: #383E5E;
+    border-color: #383E5E;
+}
+input:active ~ label, 
+input:focus ~ label, 
+input:valid ~ label {
+    transform: translateY(-12px);
+}
+input:active ~ label, 
+input:focus ~ label {
+    background-color: #7a86cb;
+    color: #0027FF;
+}
