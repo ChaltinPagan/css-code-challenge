@@ -1,0 +1,53 @@
+body {
+    font-family: 'Barlow', sans-serif;
+    background-color: #7a86cb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+button {
+    color: #E6E7F2;
+    background: 
+      linear-gradient(#7480C2, 80%, #616BA2) content-box, 
+      linear-gradient(#616BA2, #616BA2) padding-box, 
+      linear-gradient(#41486D, #41486D) border-box;
+    border: 1px solid transparent;
+    border-radius: 40px;
+    box-shadow: 0px 8px 20px #616BA2;
+    text-transform: uppercase;
+    padding: 2px;
+    width: 125px;
+    height: 50px;
+    margin: 0 10px;
+    position: relative;
+}
+button:after {
+    visibility: hidden;
+    position: absolute;
+    top: 16px;
+    left: 33px;
+    content: "Click";
+    color: #6849E3;
+}
+button:hover {
+    background: 
+      linear-gradient(#616BA2, 20%, #7480C2) content-box, 
+      linear-gradient(#7a86cb, #7480C2) padding-box, 
+      linear-gradient(#616BA2, #616BA2) border-box;
+}
+button:focus, button:active {
+    box-shadow: 0 0 0 2px #6849E3;
+    outline: none;
+    color: #383E5E;
+    background: #383E5E;
+    background: 
+      linear-gradient(#383E5E, #383E5E) content-box, 
+      linear-gradient(#41486D, #41486D) padding-box, 
+      linear-gradient(#4C547F, #4C547F) border-box;
+}
+button:focus:after, button:active:after {
+    visibility: visible;
+    content: "Clicked!";
+    color: #6849E3;
+}
